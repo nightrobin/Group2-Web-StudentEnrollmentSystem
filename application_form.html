@@ -13,6 +13,7 @@
             background-image: url("https://farm1.staticflickr.com/334/19877230064_a6013cc6b2_z.jpg");
             background-repeat: no-repeat;
             background-size: cover;
+            background-attachment: fixed;
             color:ivory;
         }
         h1, h5{
@@ -29,19 +30,29 @@
             border-color:#B22222;
             background-color: #f2f2f2;
             background-color: rgba(0,0,0, 0.4);
-            padding: 30px;
+            width: 80%;
+            height: 40%;
+            margin:0% 10% 1%;
+            padding: 3%;
         }
-        .col-25 {
+        .col-25, h3 {
             float: left;
             width: 100%;
             margin-top: 3px; 
             margin-left:15%;
+            
         }
         .col-75 {
             float: left;
             width: 100%;
             margin-top: 3px;
             margin-left:35%;
+        }
+        .col-26{
+            float: left;
+            width: 100%;
+            margin-top: 3px; 
+            margin-left:40%;
         }
         .row:after {
             content: "";
@@ -68,15 +79,14 @@
         <div class="container">
             <form action="/action_page.php">
               <div class="row">
+                 <h3><B>STUDENT'S INFORMATION</B></h3>
                 <div class="col-25">
-                <h4><B>STUDENT'S INFORMATION</B></h4>
                   <label for="fname"><B>Last Name</B></label>
                 </div>
                 <div class="col-75">
                   <input type="text" id="lname" name="lastname" placeholder="Last name.."size="40">
                 </div>
               </div>
-
               <div class="row">
                 <div class="col-25">
                   <label for="lname"><B>First Name</B></label>
@@ -145,9 +155,51 @@
                 <input type="radio" name="options" id="option3" autocomplete="off"><B> Separated</B>
                 <input type="radio" name="options" id="option3" autocomplete="off"><B> Divorced</B>
               </div>
+                <h3><B><br>FAMILY BACKGROUND</B></h3>
+                <div class="col-25"><label><B>Mother's Maiden Name</B></label>
+              </div>
+                <div class="col-75">
+                <input type="text" id="Mname" placeholder="Mother's Name"size="40">
+              </div>
+              <div class="col-25"><label><B>Address</B></label>
+              </div>
+                <div class="col-26">
+                <input type="text" id="Address" placeholder="Address"size="40">
+              </div>
+              <div class="col-25"><label><B>Contact Number</B></label>
+              </div>
+                <div class="col-26">
+                <input type="text" id="Cnumber" placeholder="Contact Number"size="40">
+              </div>
+              <div class="col-25"><label><B>Occupation</B></label>
+              </div>
+                <div class="col-26">
+                <input type="text" id="Occupation" placeholder="Occupation"size="40">
+              </div>
+              <div class="col-25"><label><B>Father's Name</B></label>
+              </div>
+                <div class="col-75">
+                <input type="text" id="Mname" placeholder="Father's Name"size="40">
+              </div>
+              <div class="col-25"><label><B>Address</B></label>
+              </div>
+                <div class="col-26">
+                <input type="text" id="Address" placeholder="Address"size="40">
+              </div>
+              <div class="col-25"><label><B>Contact Number</B></label>
+              </div>
+                <div class="col-26">
+                <input type="text" id="Cnumber" placeholder="Contact Number"size="40">
+              </div>
+              <div class="col-25"><label><B>Occupation</B></label>
+              </div>
+                <div class="col-26">
+                <input type="text" id="Occupation" placeholder="Occupation"size="40">
+              </div>
                 <div class="col-md-12 text-center">
                 <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true"><B>Next</B></a>
               </div>
+              
               </div>
     </body>
 
