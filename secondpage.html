@@ -1,200 +1,206 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <div>
-        <h1><B>MANILA STATE UNIVERSITY</B></h1>
-        <h5><B>ONLINE ENROLLMENT A.Y 2021-2022</B></h4>
-        </div>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    </head>
-    <style>
-        body{
-            font-family: Courier New;
-            background-image: url("https://farm1.staticflickr.com/334/19877230064_a6013cc6b2_z.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-            color:ivory;
-        }
-        h1, h5{
-            font-family: Courier New;
-            color: ivory;
-            background-color:rgba(0,0,0, 0.4);
-            text-align: center;
-            border-radius: 10px;
-            border-color:#B22222;
-        }
-        .container {
-            border: 3px double;
-            border-radius: 10px;
-            border-color:#B22222;
-            background-color: #f2f2f2;
-            background-color: rgba(0,0,0, 0.4);
-            width: 80%;
-            height: 40%;
-            margin:0% 10% 1%;
-            padding: 3%;
-        }
-        .col-25, h3 {
-            float: left;
-            width: 100%;
-            margin-top: 3px; 
-            margin-left:15%;
-            
-        }
-        .col-75 {
-            float: left;
-            width: 100%;
-            margin-top: 3px;
-            margin-left:35%;
-        }
-        .col-26{
-            float: left;
-            width: 100%;
-            margin-top: 3px; 
-            margin-left:40%;
-        }
-        .row:after {
-            content: "";
-            display:inline;
-            clear: both;
-        }
-        .btn{
-            float:right;
-            border-color:#B22222;
-            border-radius: 8px;
-            background-color: ivory;
-            padding: 14px 28px;
-            font-size: 16px;
-            color:#B22222;
-            width:15%;
-            cursor: pointer;
-        }
-        .btn:hover {
-            box-shadow:0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-            background-origin:ivory;
-        }
-        .dropbtn {
-            background-color: #3498DB;
-            color: white;
-            padding: 16px;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-        }
-        .dropbtn:hover, .dropbtn:focus {
-            background-color: #2980B9;
-        }
 
-          /* The container <div> - needed to position the dropdown content */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-          /* Dropdown Content (Hidden by Default) */
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f1f1f1;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-          /* Links inside the dropdown */
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-          }
-          /* Change color of dropdown links on hover */
-        .dropdown-content a:hover {
-            background-color: #ddd
-        }
-          /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-        .show {
-            display:block;
-        }
-    </style>
-        <body>
-            <h3><B>EDUCATIONAL BACKGROUND</B></h3>
-              <div class="container">
-                  <form action="/action_page.php">
-                    <div class="row">
-                        <div class="col-25">
-                            <label><B>Junior High School</B></label>
-                        </div>
-                          <div class="col-75">
-                          <input type="text" id="Jhs" placeholder="Junior High..."size="40">
-                        </div>
-                        <div class="col-25"><label><B>Address</B></label>
-                        </div>
-                          <div class="col-26">
-                          <input type="text" id="Address" placeholder="Address..."size="40">
-                        </div>
-                        <div class="col-25"><label><B>School Year</B></label>
-                        </div>
-                          <div class="col-26">
-                          <input type="text" id="sy" placeholder="School Year..."size="40">
-                        </div>
-                        <div class="col-25">
-                            <label><B>Senior High School</B></label>
-                        </div>
-                          <div class="col-75">
-                          <input type="text" id="Shs" placeholder="Senior High..."size="40">
-                        </div>
-                        <div class="col-25"><label><B>Address</B></label>
-                        </div>
-                          <div class="col-26">
-                          <input type="text" id="Address" placeholder="Address..."size="40">
-                        </div>
-                        <div class="col-25"><label><B>School Year</B></label>
-                        </div>
-                          <div class="col-26">
-                          <input type="text" id="sy" placeholder="School Year..."size="40">
-                        </div>
-                    <h3><B>GENERAL WEIGHTED AVERAGE</B></h3>          
-                      <div class="col-25">
-                          <label><B>Mathematics</B></label>
-                      </div>
-                        <div class="col-75">
-                        <input type="text" id="math" placeholder="Math Average..."size="20">
-                      </div>
-                      <div class="col-25">
-                        <label><B>English</B></label>
-                    </div>
-                      <div class="col-75">
-                      <input type="text" id="english" placeholder="English Average..."size="20">
-                    </div>
-                    <div class="col-25">
-                        <label><B>Science</B></label>
-                    </div>
-                      <div class="col-75">
-                      <input type="text" id="sci" placeholder="Science Average..."size="20">
-                    </div>
-                    <div class="col-25">
-                        <label><B>Filipino</B></label>
-                    </div>
-                      <div class="col-75">
-                      <input type="text" id="Jhs" placeholder="Filipino Average..."size="20">
-                    </div>
-                    <div class="col-25">
-                        <label><B>Overall GWA</B></label>
-                    </div>
-                      <div class="col-75">
-                      <input type="text" id="gwa" placeholder="Overall Average..."size="20">
-                    </div>
-                    <h3><B>COURSE SELECTION</B></h3>          
-                      <div class="col-25">
-                          <label><B>First Choice</B></label>
-                      </div>
-                      <div class="col-md-12 text-center">
-                        <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true"><B>Submit</B></a>
-                      </div>
-                    </div>
-        </body>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-                    
+<head>
+  <div>
+    <h1><B>MANILA STATE UNIVERSITY</B></h1>
+    <h5><B>ONLINE ENROLLMENT A.Y 2021-2022</B></h4>
+  </div>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<style>
+  body {
+    font-family: Courier New;
+    background-image: url("https://farm1.staticflickr.com/334/19877230064_a6013cc6b2_z.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: ivory;
+  }
+
+  h1,
+  h5 {
+    font-family: Courier New;
+    color: ivory;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    border-radius: 10px;
+    border-color: #B22222;
+  }
+
+  .container {
+    border: 3px double;
+    border-radius: 10px;
+    border-color: #B22222;
+    background-color: #f2f2f2;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 80%;
+    height: 40%;
+    margin: 0% 10% 1%;
+    padding: 3%;
+  }
+
+  .col-25,
+  h3 {
+    float: left;
+    width: 100%;
+    margin-top: 3px;
+    margin-left: 15%;
+
+  }
+
+  .col-75 {
+    float: left;
+    width: 100%;
+    margin-top: 3px;
+    margin-left: 35%;
+  }
+
+  .col-26 {
+    float: left;
+    width: 100%;
+    margin-top: 3px;
+    margin-left: 40%;
+  }
+
+  .row:after {
+    content: "";
+    display: inline;
+    clear: both;
+  }
+
+  .btn {
+    float: right;
+    border-color: #B22222;
+    border-radius: 8px;
+    background-color: ivory;
+    padding: 14px 28px;
+    font-size: 16px;
+    color: #B22222;
+    width: 15%;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-origin: ivory;
+  }
+
+</style>
+
+<body>
+  <h3><B>EDUCATIONAL BACKGROUND</B></h3>
+  <div class="container">
+    <form action="/action_page.php">
+      <div class="row">
+        <div class="col-25">
+          <label><B>Junior High School</B></label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="Jhs" placeholder="Junior High..." size="40">
+        </div>
+        <div class="col-25"><label><B>Address</B></label>
+        </div>
+        <div class="col-26">
+          <input type="text" id="Address" placeholder="Address..." size="40">
+        </div>
+        <div class="col-25"><label><B>School Year</B></label>
+        </div>
+        <div class="col-26">
+          <input type="text" id="sy" placeholder="School Year..." size="40">
+        </div>
+        <div class="col-25">
+          <label><B>Senior High School</B></label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="Shs" placeholder="Senior High..." size="40">
+        </div>
+        <div class="col-25"><label><B>Address</B></label>
+        </div>
+        <div class="col-26">
+          <input type="text" id="Address" placeholder="Address..." size="40">
+        </div>
+        <div class="col-25"><label><B>School Year</B></label>
+        </div>
+        <div class="col-26">
+          <input type="text" id="sy" placeholder="School Year..." size="40">
+        </div>
+        <h3><B>GENERAL WEIGHTED AVERAGE</B></h3>
+        <div class="col-25">
+          <label><B>Mathematics</B></label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="math" placeholder="Math Average..." size="20">
+        </div>
+        <div class="col-25">
+          <label><B>English</B></label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="english" placeholder="English Average..." size="20">
+        </div>
+        <div class="col-25">
+          <label><B>Science</B></label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="sci" placeholder="Science Average..." size="20">
+        </div>
+        <div class="col-25">
+          <label><B>Filipino</B></label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="Jhs" placeholder="Filipino Average..." size="20">
+        </div>
+        <div class="col-25">
+          <label><B>Overall GWA</B></label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="gwa" placeholder="Overall Average..." size="20">
+        </div>
+        <h3><B>COURSE SELECTION</B></h3>
+        <div class="col-25">
+          <label><B>First Choice</B></label><br>
+          <form name="stdntdetails" action="study.php" method="post">
+            <select name="department">
+                <option value="IT">Information Technology</option>
+                <option value="IS">Information System</option>
+                <option value="CS">Computer Science</option>
+            </select>
+            <input type="submit" id="loginbtn" name="submit"/>
+        </form>
+        </div>
+        <div class="col-25">
+          <label><B>Second Choice</B></label>
+          <form name="stdntdetails" action="study.php" method="post">
+            <select name="department">
+                <option value="IT">Information Technology</option>
+                <option value="IS">Information System</option>
+                <option value="CS">Computer Science</option>
+            </select>
+            <input type="submit" id="loginbtn" name="submit"/>
+        </form>
+        </div>
+        <div class="col-25">
+          <label><B>Third Choice</B></label>
+          <form name="stdntdetails" action="study.php" method="post">
+            <select name="department">
+                <option value="IT">Information Technology</option>
+                <option value="IS">Information System</option>
+                <option value="CS">Computer Science</option>
+            </select>
+            <input type="submit" id="loginbtn" name="submit"/>
+        </form>
+        </div>
+        <div class="col-md-12 text-center">
+          <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true"><B>Submit</B></a>
+        </div>
+      </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 </html>
