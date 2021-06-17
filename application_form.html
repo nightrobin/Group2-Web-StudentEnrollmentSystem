@@ -12,18 +12,16 @@
 <style>
   body {
     font-family: Courier New;
-    background-image: url("https://farm1.staticflickr.com/334/19877230064_a6013cc6b2_z.jpg");
+    background-image: url("https://image.freepik.com/free-vector/abstract-black-red-shiny-tech-fold-shadow-background_1408-564.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     color: ivory;
   }
 
-  h1,
-  h5 {
+  h1, h5 {
     font-family: Courier New;
     color: ivory;
-    background-color: rgba(0, 0, 0, 0.4);
     text-align: center;
     border-radius: 10px;
     border-color: #B22222;
@@ -41,8 +39,7 @@
     padding: 3%;
   }
 
-  .col-25,
-  h3 {
+  .col-25, h3 {
     float: left;
     width: 100%;
     margin-top: 3px;
@@ -75,10 +72,10 @@
     border-color: #B22222;
     border-radius: 8px;
     background-color: ivory;
-    padding: 14px 28px;
+    padding: 14px;
     font-size: 16px;
     color: #B22222;
-    width: 15%;
+    width: 10%;
     cursor: pointer;
   }
 
@@ -92,7 +89,7 @@
 
   <?php
   
-  $con = mysqli_connect('localhost', 'root', '',’db_connect’);
+  $con = mysqli_connect('localhost', 'root', '','db_connect');
 
 if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
@@ -108,7 +105,7 @@ echo "Connected successfully";
           <label for="fname"><B>Last Name</B></label>
         </div>
         <div class="col-75">
-          <input type="text" id="lname" name="lastname" placeholder="Last name.." size="40" value="" required>
+          <input type="text" id="LastName" name="lastname" placeholder="Last name.." size="40" value="" required>
         </div>
       </div>
       <div class="row">
@@ -116,7 +113,7 @@ echo "Connected successfully";
           <label for="lname"><B>First Name</B></label>
         </div>
         <div class="col-75">
-          <input type="text" id="fname" name="firstname" placeholder="First name.." size="40" value="" required>
+          <input type="text" id="FirstName" name="firstname" placeholder="First name.." size="40" value="" required>
         </div>
       </div>
 
@@ -124,14 +121,14 @@ echo "Connected successfully";
         <div class="col-25"><B>Middle Name</B></label>
         </div>
         <div class="col-75">
-          <input type="text" id="mname" name="middlename" placeholder="Middle name.." size="40" value="" required>
+          <input type="text" id="MiddleName" name="middlename" placeholder="Middle name.." size="40" value="" required>
         </div>
       </div>
       <div class="row">
         <div class="col-25"><B>Suffix</B></label>
         </div>
         <div class="col-75">
-          <input type="text" id="sname" name="suffixname" placeholder="Jr., II, III.." size="40">
+          <input type="text" id="SuffixName" name="suffixname" placeholder="Jr., II, III.." size="40">
         </div>
         <div class="col-25"><label><B>Learner's Reference Number (LRN)</B></label>
         </div>
@@ -148,8 +145,8 @@ echo "Connected successfully";
         <div class="col-25"><label><B>Gender</B></label>
         </div>
         <div class="col-75">
-          <input type="radio" name="options" id="option3" autocomplete="off"><B> Male</B>
-          <input type="radio" name="options" id="option3" autocomplete="off"><B> Female</B>
+          <input type="radio" name="options" id="Gender" autocomplete="off"><B> Male</B>
+          <input type="radio" name="options" id="Gender" autocomplete="off"><B> Female</B>
         </div>
         <div class="col-25"><label><B>Nationality</B></label>
         </div>
@@ -171,56 +168,56 @@ echo "Connected successfully";
         <div class="col-25"><label><B>Phone Number</B></label>
         </div>
         <div class="col-75">
-          <input type="text" name="phone" id="Phone Number" placeholder="..." size="40" value="" required>
+          <input type="text" name="phone" id="PhoneNumber" placeholder="..." size="40" value="" required>
         </div>
         <div class="col-25"><label><B>Status</B></label>
         </div>
         <div class="col-75">
-          <input type="radio" name="optionsq" id="option3" autocomplete="off"><B> Single</B>
-          <input type="radio" name="optionsq" id="option3" autocomplete="off"><B> Married</B>
-          <input type="radio" name="optionsq" id="option3" autocomplete="off"><B> Separated</B>
-          <input type="radio" name="optionsq" id="option3" autocomplete="off"><B> Divorced</B>
+          <input type="radio" name="optionsq" id="Status" autocomplete="off"><B> Single</B>
+          <input type="radio" name="optionsq" id="Status" autocomplete="off"><B> Married</B>
+          <input type="radio" name="optionsq" id="Status" autocomplete="off"><B> Separated</B>
+          <input type="radio" name="optionsq" id="Status" autocomplete="off"><B> Divorced</B>
         </div>
         <h3><B><br>FAMILY BACKGROUND</B></h3>
         <div class="col-25"><label><B>Mother's Maiden Name</B></label>
         </div>
         <div class="col-75">
-          <input type="text" name="mmn" id="Mname" placeholder="Mother's Name" size="40" value="" required>
+          <input type="text" name="mmn" id="MotherName" placeholder="Mother's Name" size="40" value="" required>
         </div>
         <div class="col-25"><label><B>Address</B></label>
         </div>
         <div class="col-26">
-          <input type="text" name="madd" id="Address" placeholder="Address" size="35" value="" required>
+          <input type="text" name="madd" id="MotherAddress" placeholder="Address" size="35" value="" required>
         </div>
         <div class="col-25"><label><B>Contact Number</B></label>
         </div>
         <div class="col-26">
-          <input type="text" name="mcn" id="Cnumber" placeholder="Contact Number" size="35" value="" required>
+          <input type="text" name="mcn" id="MotherContact" placeholder="Contact Number" size="35" value="" required>
         </div>
         <div class="col-25"><label><B>Occupation</B></label>
         </div>
         <div class="col-26">
-          <input type="text" name="moccu" id="Occupation" placeholder="Occupation" size="35" value="" required>
+          <input type="text" name="moccu" id="MotherOccupation" placeholder="Occupation" size="35" value="" required>
         </div>
         <div class="col-25"><label><B>Father's Name</B></label>
         </div>
         <div class="col-75">
-          <input type="text" name="fn" id="Mname" placeholder="Father's Name" size="40" value="" required>
+          <input type="text" name="fn" id="FatherName" placeholder="Father's Name" size="40" value="" required>
         </div>
         <div class="col-25"><label><B>Address</B></label>
         </div>
         <div class="col-26">
-          <input type="text" name="fadd" id="Address" placeholder="Address" size="35" value="" required>
+          <input type="text" name="fadd" id="FatherAddress" placeholder="Address" size="35" value="" required>
         </div>
         <div class="col-25"><label><B>Contact Number</B></label>
         </div>
         <div class="col-26">
-          <input type="text" name="fcn" id="Cnumber" placeholder="Contact Number" size="35" value="" required>
+          <input type="text" name="fcn" id="FatherContact" placeholder="Contact Number" size="35" value="" required>
         </div>
         <div class="col-25"><label><B>Occupation</B></label>
         </div>
         <div class="col-26">
-          <input type="text" name="foccu" id="Occupation" placeholder="Occupation" size="35" value="" required>
+          <input type="text" name="foccu" id="FatherOccupation" placeholder="Occupation" size="35" value="" required>
         </div>
         <div class="col-md-12 text-center">
           <a href="file:///C:/Users/alexandra/Desktop/PE%20Exercises/Group2-Web-StudentEnrollmentSystem/secondpage.html"
