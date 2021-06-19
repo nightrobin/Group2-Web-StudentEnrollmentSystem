@@ -5,6 +5,8 @@
     $password = "";
     $dbName = "records";
 
+    /*<!-- delete table
+    ================================================== -->*/
     function drop()
     {
         // Create connection
@@ -22,6 +24,8 @@
         $conn->close();
     }
 
+    /*<!-- create database and table
+    ================================================== -->*/
     function init()
     {
         // Create connection
@@ -78,11 +82,11 @@
                 jhsSchoolYear TEXT,
                 shsAddress TEXT,
                 shsSchoolYear TEXT,
-                gwaMath DOUBLE,
-                gwaScience DOUBLE,
-                gwaEnglish DOUBLE,
-                gwaFilipino DOUBLE,
-                gwa DOUBLE,
+                gwaMath TEXT,
+                gwaScience TEXT,
+                gwaEnglish TEXT,
+                gwaFilipino TEXT,
+                gwa TEXT,
                 firstChoice TEXT,
                 secondChoice TEXT,
                 thirdChoice TEXT,
@@ -98,8 +102,7 @@
             $sql = "CREATE TABLE IF NOT EXISTS temp_user (
                 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
                 `status` TEXT,
-                tempID TEXT,
-                `password` TEXT
+                tempID TEXT
             )";
 
             if ($conn->query($sql) === TRUE) {
@@ -108,7 +111,7 @@
                 echo("Table creation unsuccessfully!");
             }
 
-            $sql = "INSERT INTO temp_user(`status`, `tempID`, `password`) VALUES ('', '1', 'admin123')";
+            $sql = "INSERT INTO temp_user(`status`, `tempID`) VALUES ('active', '0')";
 
             if ($conn->query($sql) === TRUE) {
                 echo("Added default data successfully!");
@@ -116,8 +119,178 @@
                 echo("error on default data");
             }
 
+            defaultData();
             $conn->close();
         }
+        
+    }
+
+    function defaultData()
+    {
+        $conn = new mysqli($GLOBALS['servername'], $GLOBALS['username'], $GLOBALS['password'], $GLOBALS['dbName']);
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+                echo("Cannot connect!");
+            }
+
+            $sql = "INSERT INTO studentInfo (
+                `lastName`, 
+                `firstName`, 
+                `middleName`, 
+                `suffix`, 
+                `LRN`, 
+                `age`, 
+                `gender`, 
+                `nationality`, 
+                `address`, 
+                `email`, 
+                `phoneNumber`, 
+                `status`, 
+                `applicantNumber`
+                `mMaidenName`, 
+                `mAddress`, 
+                `mContactNumber`, 
+                `mOccupation`, 
+                `fName`, 
+                `fAddress`, 
+                `fContactNumber`, 
+                `fOccupation`,
+                `jhsAddress`, 
+                `jhsSchoolYear`, 
+                `shsAddress`, 
+                `shsSchoolYear`,
+                `firstChoice`,
+                `secondChoice`, 
+                `thirdChoice`,
+                `gwaMath`, 
+                `gwaScience`,
+                `gwaEnglish`, 
+                `gwaFilipino`, 
+                `gwa`,
+                `password`
+                )
+
+            VALUES (
+                'Doe',
+                'John',
+                'Michael'
+                'Jr.', 
+                '111111111111',
+                '22', 
+                'Male', 
+                'American', 
+                'John Doe 123 Main St Anytown, USA', 
+                'johndoe@email.com', 
+                '(111) 111-1111', 
+                'Single',
+                '1234'
+                'Jane Doe',
+                'Jane Doe 123 Main St Anytown, USA',
+                '(222) 222-2222', 
+                'None', 
+                'Michael Doe', 
+                'Michael Doe 123 Main St Anytown, USA', 
+                '(333) 333-3333',
+                'None',
+                'Junior High School, USA',
+                '2010-2014', 
+                'Senior High School, USA', 
+                '2014-2016', 
+                'None', 
+                'None', 
+                'None', 
+                '99.9', 
+                '99.9', 
+                '99.9', 
+                '99.9', 
+                '0', 
+                '1234'
+                )";
+    }
+
+    function generateApplicantNo()
+    {
+    /*<!-- Connect to database
+    ================================================== -->*/
+    $conn = new mysqli($GLOBALS['servername'], $GLOBALS['username'], $GLOBALS['password'], $GLOBALS['dbName']);
+    // Check connection
+    if ($conn->connect_error)
+    {
+    die("Connection failed: " . $conn->connect_error);
+    echo("Cannot connect!");
+    }
+
+    $sql = "SELECT MAX(`id`) FROM studentInfo";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0)
+    {
+        while($row = $result->fetch_assoc())
+        {
+            $generated = (is_null($row["id"])) ? 0 : (int)$row["id"];
+        }
+    }
+    else 
+    {
+        $generated = 0;    
+    }
+        $conn->close();
+
+    
+
+    $applicantNo = "MSU2021-00" .$generated + 1;
+    return $applicantNo;
+    }
+
+    function insertEntry()
+    {
+        /*<!-- Connect to database
+    ================================================== -->*/
+    $conn = new mysqli($GLOBALS['servername'], $GLOBALS['username'], $GLOBALS['password'], $GLOBALS['dbName']);
+    // Check connection
+    if ($conn->connect_error)
+    {
+    die("Connection failed: " . $conn->connect_error);
+    echo("Cannot connect!");
+    }
+
+        $lastName = $_REQUEST['lastname'];
+        firstName
+        middleName
+        suffix
+        LRN
+        age
+        gender
+        nationality
+        `address`
+        email
+        phoneNumber
+        `status`
+        mMaidenName
+        mAddress
+        mContactNumber
+        mOccupation
+        fAddress
+        fContactNumber
+        fOccupation
+        jhsAddress
+        jhsSchoolYear
+        shsAddress
+        shsSchoolYear
+        gwaMath
+        gwaScience
+        gwaEnglish
+        gwaFilipino
+        gwa
+        firstChoice
+        secondChoice
+        thirdChoice
+        `password`
+
+        $sql = "INSERT INTO studentInfo 
+                VALUES (
+                '$lastname', 
+            )";
     }
 
     /*
@@ -137,7 +310,7 @@
         $conn->close();
     }
     */
-    function getUser(string $tempuserId, string $temppass)
+    /*function temp_user(string $tempuserId, string $temppass)
     {
         $jsonResult["tempID"] = "";
         $jsonResult["status"] = "";
@@ -161,5 +334,5 @@
         }
         $conn->close();
         return json_encode($jsonResult);
-    }
+    }*/
 ?>
