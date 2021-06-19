@@ -242,57 +242,6 @@
     return $applicantNo;
     }
 
-    function insertEntry()
-    {
-        /*<!-- Connect to database
-    ================================================== -->*/
-    $conn = new mysqli($GLOBALS['servername'], $GLOBALS['username'], $GLOBALS['password'], $GLOBALS['dbName']);
-    // Check connection
-    if ($conn->connect_error)
-    {
-    die("Connection failed: " . $conn->connect_error);
-    echo("Cannot connect!");
-    }
-
-        $lastName = $_REQUEST['lastname'];
-        firstName
-        middleName
-        suffix
-        LRN
-        age
-        gender
-        nationality
-        `address`
-        email
-        phoneNumber
-        `status`
-        mMaidenName
-        mAddress
-        mContactNumber
-        mOccupation
-        fAddress
-        fContactNumber
-        fOccupation
-        jhsAddress
-        jhsSchoolYear
-        shsAddress
-        shsSchoolYear
-        gwaMath
-        gwaScience
-        gwaEnglish
-        gwaFilipino
-        gwa
-        firstChoice
-        secondChoice
-        thirdChoice
-        `password`
-
-        $sql = "INSERT INTO studentInfo 
-                VALUES (
-                '$lastname', 
-            )";
-    }
-
     /*
     function getTemplate()
     {

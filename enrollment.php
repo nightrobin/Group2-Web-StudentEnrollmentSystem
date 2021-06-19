@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <div>
     <h1><B>MANILA STATE UNIVERSITY</B></h1>
@@ -21,17 +20,15 @@
 </head>
 <style>
   body {
-    font-family: Courier New;
+    font-family: Montserrat;
     background-image: url("https://image.freepik.com/free-vector/abstract-black-red-shiny-tech-fold-shadow-background_1408-564.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     color: ivory;
   }
-
-  h1,
-  h5 {
-    font-family: Courier New;
+  h1, h5 {
+    font-family: Montserrat;
     color: ivory;
     text-align: center;
     border-radius: 10px;
@@ -56,21 +53,21 @@
     width: 100%;
     margin-top: 3px;
     margin-left: 15%;
-
+    font-size:17px;
   }
 
   .col-75 {
     float: left;
     width: 100%;
     margin-top: 3px;
-    margin-left: 35%;
+    margin-left: 45%;
   }
 
   .col-26 {
     float: left;
     width: 100%;
     margin-top: 3px;
-    margin-left: 40%;
+    margin-left: 45%;
   }
 
   .row:after {
@@ -79,22 +76,6 @@
     clear: both;
   }
 
-  .btn-secondary {
-    float: right;
-    border-color: #B22222;
-    border-radius: 8px;
-    background-color: ivory;
-    padding: 14px;
-    font-size: 16px;
-    color: #B22222;
-    width: 10%;
-    cursor: pointer;
-  }
-
-  .btn:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-origin: ivory;
-  }
 </style>
 
 <body>
@@ -226,50 +207,230 @@
         <div class="col-26">
           <input type="text" name="foccu" id="FatherOccupation" placeholder="Occupation" size="35" value="" required>
         </div>
-        <div class="col-md-12 text-center">
-          <a href="secondpage.html"
-            class="btn btn-secondary btn-lg active" role="button" aria-pressed="true"><B>Next</B></a>
+        <h3><B><br>EDUCATIONAL BACKGROUND</B></h3>
+        <div class="col-25">
+          <label><B>Junior High School</B></label>
         </div>
-
-      </div>
-
-      <button type="button" onclick="my_button_click_handler">Submit</button>
+        <div class="col-75">
+          <input type="text" id="JHS" placeholder="Junior High..." size="40" value="" required>
+        </div>
+        <div class="col-25"><label><B>Address</B></label>
+        </div>
+        <div class="col-26">
+          <input type="text" id="JHSAddress" placeholder="Address..." size="40" value="" required>
+        </div>
+        <div class="col-25"><label><B>School Year</B></label>
+        </div>
+        <div class="col-26">
+          <input type="text" id="JHSsy" placeholder="School Year..." size="40" value="" required> 
+        </div>
+        <div class="col-25">
+          <label><B>Senior High School</B></label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="SHS" placeholder="Senior High..." size="40" value="" required>
+        </div>
+        <div class="col-25"><label><B>Address</B></label>
+        </div>
+        <div class="col-26">
+          <input type="text" id="SHSAddress" placeholder="Address..." size="40" value="" required>
+        </div>
+        <div class="col-25"><label><B>School Year</B></label>
+        </div>
+        <div class="col-26">
+          <input type="text" id="SHSsy" placeholder="School Year..." size="40" value="" required>
+        </div>
+        <h3><B>GENERAL WEIGHTED AVERAGE</B></h3>
+        <div class="col-25">
+          <label><B>Mathematics</B></label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="MAve" placeholder="Math Average..." size="20" value="" required>
+        </div>
+        <div class="col-25">
+          <label><B>English</B></label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="EAve" placeholder="English Average..." size="20" value="" required>
+        </div>
+        <div class="col-25">
+          <label><B>Science</B></label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="SAVe" placeholder="Science Average..." size="20" value="" required>
+        </div>
+        <div class="col-25">
+          <label><B>Filipino</B></label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="FAve" placeholder="Filipino Average..." size="20" value="" required>
+        </div>
+        <div class="col-25">
+          <label><B>Overall GWA</B></label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="GWA" placeholder="Overall Average..." size="20" value="" required>
+        </div>
+        <h3><B>COURSE SELECTION</B></h3>
+        <div class="col-25">
+          <label><B>First Choice</B></label><br>
+          <form name="stdntdetails" action="study.php" method="post">
+            <select name="department">
+                <option value="default">SELECT A COURSE</option>
+                <option value="BSARCH">CAUP-Bachelor of Science in Architecture</option>
+                <option value="BEEd">CE-Bachelor of Elementary Education </option>
+                <option value="BECEd">CE-Bachelor of Early Childhood Education </option>
+                <option value="BSNEd">CE-Bachelor of Special Needs Education </option>
+                <option value="BSEd-Eng">CE-Bachelor of Secondary Education major in English </option>
+                <option value="BSEd-Fil">CE-Bachelor of Secondary Education major in Filipino </option>
+                <option value="BSEd-Math">CE-sBachelor of Secondary Education major Mathematic </option>
+                <option value="BSEd-Sciences">CE-Bachelor of Secondary Education major in Sciences </option>
+                <option value="BSEd-SS">CE-Bachelor of Secondary Education major in Social Studies </option>
+                <option value="BPE">CE-Bachelor of Physical Education </option>
+                <option value="BSCHE">CET-Bachelor of Science in Chemical Engineering</option>
+                <option value="BSCE">CET-Bachelor of Science in Civil Engineering</option>
+                <option value="BSCpE">CET-Bachelor of Science in Computer Engineering</option>
+                <option value="BSCS">CET-Bachelor of Science in Computer Science </option>
+                <option value="BSEE">CET-Bachelor of Science in Electrical Engineering </option>
+                <option value="BSECE">CET-Bachelor of Science in Electronics Engineering</option>
+                <option value="BSIT">CET-Bachelor of Science in Information Technology</option>
+                <option value="BSMFGE">CET-Bachelor of Science in Manufacturing Engineering </option>
+                <option value="BSME">CET-Bachelor of Science in Mechanical Engineering</option>
+                <option value="BAC">CHASS-Bachelor of Arts in Communication</option>
+                <option value="BACPR">CHASS-Bachelor of Arts in Communication Major in Public Relations</option>
+                <option value="BAPR">CHASS-Bachelor of Arts in Public Relations</option>
+                <option value="BSN">CN-Bachelor of Science in Nursing</option>
+                <option value="BSPT">CPT-Bachelor of Science in Physical Therapy</option>
+                <option value="BSBIO">Bachelor of Science in Biology</option>
+                <option value="BSCHEM">Bachelor of Science in Chemistry</option>
+                <option value="BSMATH">Bachelor of Science in Mathematics</option>
+                <option value="BSPSY">Bachelor of Science in Psychology</option>
+            </select>
+            <input type="submit" id="FC" name="submit"/>
+        </form>
+        </div>
+        <div class="col-25">
+          <label><B>Second Choice</B></label>
+          <form name="stdntdetails" action="study.php" method="post">
+            <select name="department">
+              <option value="default">SELECT A COURSE</option>
+              <option value="BSARCH">CAUP-Bachelor of Science in Architecture</option>
+              <option value="BEEd">CE-Bachelor of Elementary Education </option>
+              <option value="BECEd">CE-Bachelor of Early Childhood Education </option>
+              <option value="BSNEd">CE-Bachelor of Special Needs Education </option>
+              <option value="BSEd-Eng">CE-Bachelor of Secondary Education major in English </option>
+              <option value="BSEd-Fil">CE-Bachelor of Secondary Education major in Filipino </option>
+              <option value="BSEd-Math">CE-Bachelor of Secondary Education major Mathematics </option>
+              <option value="BSEd-Sciences">CE-Bachelor of Secondary Education major in Sciences </option>
+              <option value="BSEd-SS">CE-Bachelor of Secondary Education major in Social Studies </option>
+              <option value="BPE">CE-Bachelor of Physical Education </option>
+              <option value="BSCHE">CET-Bachelor of Science in Chemical Engineering</option>
+              <option value="BSCE">CET-Bachelor of Science in Civil Engineering</option>
+              <option value="BSCpE">CET-Bachelor of Science in Computer Engineering</option>
+              <option value="BSCS">CET-Bachelor of Science in Computer Science </option>
+              <option value="BSEE">CET-Bachelor of Science in Electrical Engineering </option>
+              <option value="BSECE">CET-Bachelor of Science in Electronics Engineering</option>
+              <option value="BSIT">CET-Bachelor of Science in Information Technology</option>
+              <option value="BSMFGE">CET-Bachelor of Science in Manufacturing Engineering </option>
+              <option value="BSME">CET-Bachelor of Science in Mechanical Engineering</option>
+              <option value="BSME">CET-Bachelor of Science in Mechanical Engineering</option>
+              <option value="BAC">CHASS-Bachelor of Arts in Communication</option>
+              <option value="BACPR">CHASS-Bachelor of Arts in Communication Major in Public Relations</option>
+              <option value="BAPR">CHASS-Bachelor of Arts in Public Relations</option>
+              <option value="BSN">CN-Bachelor of Science in Nursing</option>
+              <option value="BSPT">CPT-Bachelor of Science in Physical Therapy</option>
+              <option value="BSBIO">Bachelor of Science in Biology</option>
+              <option value="BSCHEM">Bachelor of Science in Chemistry</option>
+              <option value="BSMATH">Bachelor of Science in Mathematics</option>
+              <option value="BSPSY">Bachelor of Science in Psychology</option>
+            </select>
+            <input type="submit" id="SC" name="submit"/>
+        </form>
+        </div>
+        <div class="col-25">
+          <label><B>Third Choice</B></label>
+          <form name="stdntdetails" action="study.php" method="post">
+            <select name="department">
+              <option value="default">SELECT A COURSE</option>
+              <option value="BSARCH">CAUP-Bachelor of Science in Architecture</option>
+              <option value="BEEd">CE-Bachelor of Elementary Education </option>
+              <option value="BECEd">CE-Bachelor of Early Childhood Education </option>
+              <option value="BSNEd">CE-Bachelor of Special Needs Education </option>
+              <option value="BSEd-Eng">CE-Bachelor of Secondary Education major in English </option>
+              <option value="BSEd-Fil">CE-Bachelor of Secondary Education major in Filipino </option>
+              <option value="BSEd-Math">CE-Bachelor of Secondary Education major Mathematics </option>
+              <option value="BSEd-Sciences">CE-Bachelor of Secondary Education major in Sciences </option>
+              <option value="BSEd-SS">CE-Bachelor of Secondary Education major in Social Studies </option>
+              <option value="BPE">CE-Bachelor of Physical Education </option>
+              <option value="BSCHE">CET-Bachelor of Science in Chemical Engineering</option>
+              <option value="BSCE">CET-Bachelor of Science in Civil Engineering</option>
+              <option value="BSCpE">CET-Bachelor of Science in Computer Engineering</option>
+              <option value="BSCS">CET-Bachelor of Science in Computer Science </option>
+              <option value="BSEE">CET-Bachelor of Science in Electrical Engineering </option>
+              <option value="BSECE">CET-Bachelor of Science in Electronics Engineering</option>
+              <option value="BSIT">CET-Bachelor of Science in Information Technology</option>
+              <option value="BSMFGE">CET-Bachelor of Science in Manufacturing Engineering </option>
+              <option value="BSME">CET-Bachelor of Science in Mechanical Engineering</option>
+              <option value="BSME">CET-Bachelor of Science in Mechanical Engineering</option>
+              <option value="BAC">CHASS-Bachelor of Arts in Communication</option>
+              <option value="BACPR">CHASS-Bachelor of Arts in Communication Major in Public Relations</option>
+              <option value="BAPR">CHASS-Bachelor of Arts in Public Relations</option>
+              <option value="BSN">CN-Bachelor of Science in Nursing</option>
+              <option value="BSPT">CPT-Bachelor of Science in Physical Therapy</option>
+              <option value="BSBIO">Bachelor of Science in Biology</option>
+              <option value="BSCHEM">Bachelor of Science in Chemistry</option>
+              <option value="BSMATH">Bachelor of Science in Mathematics</option>
+              <option value="BSPSY">Bachelor of Science in Psychology</option>
+            </select>
+            <input type="submit" id="TC" name="submit"/>
+        </form>
+        </div>
+        <div class="col-25">
+              <label><B>Password</B></label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="Password" placeholder="Password..." size="30" value="" required>
+            </div>
+            <div class="col-25">
+            <button type="button" onclick="my_button_click_handler" style="float:right;">Submit</button>
+  </div>
       <script>
         function my_button_click_handler ()
         {
           var jsonObj = {
             "lastName": document.getElementById("LastName").value,
-            firstName
-            middleName
-            suffix
-            LRN
-            age
-            gender
-            nationality
-            address
-            email
-            phoneNumber
-            status
-            mMaidenName
-            mAddress
-            mContactNumber
-            mOccupation
-            fAddress
-            fContactNumber
-            fOccupation
-            jhsAddress
-            jhsSchoolYear
-            shsAddress
-            shsSchoolYear
-            gwaMath
-            gwaScience
-            gwaEnglish
-            gwaFilipino
-            gwa
-            firstChoice
-            secondChoice
-            thirdChoice
-            password
+            "firstName": document.getElementById("FirstName").value,
+            "middleName": document.getElementById("MiddleName").value,
+            "suffix": document.getElementById("SuffixName").value,
+            "LRN": document.getElementById("LRN").value,
+            "age": document.getElementById("Age").value,
+            "gender": document.getElementById("Gender").value,
+            "nationality": document.getElementById("Nationality").value,
+            "address": document.getElementById("Address").value,
+            "email": document.getElementById("Email").value,
+            "PhoneNumber": document.getElementById("PhoneNumber").value,
+            "status": document.getElementById("Status").value,
+            "mMaidenName": document.getElementById("MotherName").value,
+            "mAddress": document.getElementById("MotherAddress").value,
+            "mContactNumber": document.getElementById("MotherContact").value,
+            "mOccupation": document.getElementById("MotherOccupatio").value,
+            "fName": document.getElementById("FatherName").value,
+            "fAddress": document.getElementById("FatherAddress").value,
+            "fContactNumber": document.getElementById("FatherContact").value,
+            "fOccupation": document.getElementById("FatherOccupation").value,
+            "jhsAddress": document.getElementById("JHSAddress").value,
+            "jhsSchoolYear": document.getElementById("JHSsy").value,
+            "shsAddress": document.getElementById("SHSAddress").value,
+            "shsSchoolYear": document.getElementById("SHSsy").value,
+            "gwaMath": document.getElementById("MAve").value,
+            "gwaScience": document.getElementById("SAve").value,
+            "gwaEnglish": document.getElementById("EAve").value,
+            "gwaFilipino": document.getElementById("FAve").value,
+            "gwa": document.getElementById("GWA").value,
+            "firstChoice": document.getElementById("FC").value,
+            "secondChoice": document.getElementById("SC").value,
+            "thirdChoice": document.getElementById("TC").value,
+            "password": document.getElementById("Password").value,
           };
         var jsonString = JSON.stringify(jsonObj);
         $.ajax({

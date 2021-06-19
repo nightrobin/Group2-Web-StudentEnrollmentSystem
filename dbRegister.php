@@ -21,41 +21,42 @@
 
         $sql = "INSERT INTO studentInfo 
             VALUES (".
-            "'".$jsonObj->$lastName."',"
+            "'".$jsonObj->$lastName.","
             "'".$jsonObj->$firstName.","
             "'".$jsonObj->$middleName.","
-            .");";
+            "'".$jsonObj->$suffix.","
+            "'".$jsonObj->$LRN.","
+            "'".$jsonObj->$age.","
+            "'".$jsonObj->$gender.","
+            "'".$jsonObj->$nationality.","
+            "'".$jsonObj->$address.","
+            "'".$jsonObj->$email.","
+            "'".$jsonObj->$phoneNumber.","
+            "'".$jsonObj->$status.","
+            "'".$jsonObj->$mMaidenName.","
+            "'".$jsonObj->$mAddress.","
+            "'".$jsonObj->$mContactNumber.","
+            "'".$jsonObj->$mOccupation.","
+            "'".$jsonObj->$fAddress.","
+            "'".$jsonObj->$fContactNumber.","
+            "'".$jsonObj->$fOccupation.","
+            "'".$jsonObj->$jhsAddress.","
+            "'".$jsonObj->$jhsSchoolYear.","
+            "'".$jsonObj->$shsAddress.","
+            "'".$jsonObj->$shsSchoolYear.","
+            "'".$jsonObj->$gwaMath.","
+            "'".$jsonObj->$gwaScience.","
+            "'".$jsonObj->$gwaEnglish.","
+            "'".$jsonObj->$gwaFilipino.","
+            "'".$jsonObj->$gwa.","
+            "'".$jsonObj->$firstChoice.","
+            "'".$jsonObj->$secondChoice.","
+            "'".$jsonObj->$thirdChoice.","
+            "'".$jsonObj->$password.","
+          .");";
         
-        middleName
-        suffix
-        LRN
-        age
-        gender
-        nationality
-        address
-        email
-        phoneNumber
-        status
-        mMaidenName
-        mAddress
-        mContactNumber
-        mOccupation
-        fAddress
-        fContactNumber
-        fOccupation
-        jhsAddress
-        jhsSchoolYear
-        shsAddress
-        shsSchoolYear
-        gwaMath
-        gwaScience
-        gwaEnglish
-        gwaFilipino
-        gwa
-        firstChoice
-        secondChoice
-        thirdChoice
-        password
+        
+    
 
         if ($conn->query($sql) === TRUE) {
             $ret = "Succesfully registered!";

@@ -10,7 +10,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Manila State University</title>
+    <title>Log In</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -35,6 +35,30 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
 </head>
+<style>
+    .form-signin{
+        border: 3px double;
+        border-radius: 10px;
+        border-color: #B22222;
+        background-color: rgba(0, 0, 0, 0.4);
+        width: 60%;
+        height: 50%;
+        padding: 3%;
+        margin-top:20%;
+    }
+    h4{
+        font-family: Montserrat;
+        color:white;
+        text-align:left;
+        
+    }
+    .form-signin, .sr-only{
+        font-family: Montserrat;
+        color:white;
+        text-align:right;
+        float: right;
+    }
+</style>
 
 <body id="top">
 
@@ -42,15 +66,10 @@
     ================================================== -->
     <header class="s-header">
 
-        <div class="header-logo">
-            <a class="site-logo" href="index.html"><img src="images/logo1.png" alt="Manila State University"></a>
-        </div>
-
         <nav class="header-nav-wrap">
             <ul class="header-nav">
-                <li class="current"><a href="course_offered.php">Courses Offered</a></li>
-                <li><a href="enrollment.php">Enroll Now</a></li>
-                <li><a href="login.php">Login</a></li>
+                
+                <li><a href="index.php">Home</a></li>
             </ul>
         </nav>
 
@@ -58,11 +77,6 @@
 
     </header> <!-- end s-header -->
 
-<?php 
-    require 'dbConnect.php';
-    drop();
-    init();
-?>
 
     <!-- home
    ================================================== -->
@@ -76,48 +90,21 @@
 
             <div class="row home-content__main">
 
-                <h3>GROUP 2 ENROLLMENT WEBSITE</h3>
-
-                <h1>
-                    Welcome to <br>
-                    Manila State University!<br>
-                    Not a student?<br><font color="darkred">ENROLL NOW!</font>
-                </h1>
-
-                <div class="home-content__buttons">
-                    <a href="enrollment.php" class="smoothscroll btn btn--stroke">
-                        ENROLL NOW
-                    </a>
-                    <a href="login.php" class="smoothscroll btn btn--stroke">
-                        LOGIN
-                    </a>
+                <div class="text-center" cz-shortcut-listen="true">
+                    <form class="form-signin">
+                        <h4 id="h4" class="h4 mb-3 font-weight-normal">Log In Account</h4>
+                            <label for="uname" class="sr-only"><br>Applicant No.</label>
+                            <input type="text" id="uname" class="form-control" placeholder="Applicant..." required="" autofocus="" size="35" style="color:white;">
+        
+                            <label for="inputPassword" class="sr-only">Password</label>
+                            <input type="password" id="inputPassword" class="form-control" placeholder="Password..." required="" size="35" style="color:white;">
+        
+                            <button class="btn btn-lg btn-danger btn-block" type="submit">Log in</button>
+                            <br>
+                            <a href="enrollment.html"><u><font color="white">Not a Student? Click here to Enroll Now!</font></u></a>
+                        </div>    
+                    </form>
                 </div>
-
-                <div class="home-content__scroll">
-                    <a href="#about" class="scroll-link smoothscroll">
-                        <span>Scroll Down</span>
-                    </a>
-                </div>
-
-            </div>
-
-        </div> <!-- end home-content -->
-
-        <ul class="home-social">
-            <li>
-                <a href="#"><i class="im im-facebook" aria-hidden="true"></i><span>Facebook Page</span></a>
-            </li>
-            <li>
-                <a href="#"><i class="im im-twitter" aria-hidden="true"></i><span>Twittter</span></a>
-            </li>
-            <li>
-                <a href="#"><i class="im im-instagram" aria-hidden="true"></i><span>Instagram</span></a>
-            </li>
-        </ul>
-        <!-- end home-social -->
-
-    </section> <!-- end s-home -->
-
     <!-- footer
     ================================================== -->
     <footer>

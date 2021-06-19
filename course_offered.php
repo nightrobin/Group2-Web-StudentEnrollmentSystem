@@ -10,7 +10,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Manila State University</title>
+    <title>Courses Offered</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -43,7 +43,7 @@
     <header class="s-header">
 
         <div class="header-logo">
-            <a class="site-logo" href="index.html"><img src="images/logo1.png" alt="Manila State University"></a>
+            <a class="site-logo" href="index.php"><img src="images/logo1.png" alt="Manila State University"></a>
         </div>
 
         <nav class="header-nav-wrap">
@@ -58,11 +58,19 @@
 
     </header> <!-- end s-header -->
 
-<?php 
-    require 'dbConnect.php';
-    drop();
-    init();
-?>
+            <!-- start home-social -->
+    <ul class="home-social">
+        <li>
+            <a href="#"><i class="im im-facebook" aria-hidden="true"></i><span>Facebook Page</span></a>
+        </li>
+        <li>
+            <a href="#"><i class="im im-twitter" aria-hidden="true"></i><span>Twittter</span></a>
+        </li>
+        <li>
+            <a href="#"><i class="im im-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+        </li>
+    </ul>
+            <!-- end home-social -->
 
     <!-- home
    ================================================== -->
@@ -77,44 +85,61 @@
             <div class="row home-content__main">
 
                 <h3>GROUP 2 ENROLLMENT WEBSITE</h3>
-
                 <h1>
                     Welcome to <br>
                     Manila State University!<br>
-                    Not a student?<br><font color="darkred">ENROLL NOW!</font>
+                    <br><font color="darkred">Offered Courses</font>
                 </h1>
-
-                <div class="home-content__buttons">
-                    <a href="enrollment.php" class="smoothscroll btn btn--stroke">
-                        ENROLL NOW
-                    </a>
-                    <a href="login.php" class="smoothscroll btn btn--stroke">
-                        LOGIN
-                    </a>
-                </div>
-
-                <div class="home-content__scroll">
-                    <a href="#about" class="scroll-link smoothscroll">
-                        <span>Scroll Down</span>
-                    </a>
-                </div>
-
+                <h3>COLLEGE OF ARCHITECTURE AND URBAN PLANNING</h3>
+                <ul><font color="white">
+                    <li>Bachelor of Science in Architecture</li>
+                    <li>Bachelor of Elementary Education</li>
+                    <li>Bachelor of Early Childhood Education</li>
+                    <li>Bachelor of Special Needs Education</li>
+                    <li>Bachelor of Secondary Education major in English</li>
+                    <li>Bachelor of Secondary Education major in Filipino </li>
+                    <li>Bachelor of Secondary Education major Mathematic</li>
+                    <li>Bachelor of Secondary Education major in Sciences</li>
+                    <li>Bachelor of Secondary Education major in Social Studies</li>
+                    <li>Bachelor of Physical Education</li></font>
+                </ul>
+                <h3>COLLEGE OF ENGINEERING AND TECHNOLOGY</h3>
+                <ul><font color="white">
+                    <li>Bachelor of Science in Chemical Engineering</li>
+                    <li>Bachelor of Science in Civil Engineering</li>
+                    <li>Bachelor of Science in Computer Engineering</li>
+                    <li>Bachelor of Science in Computer Science</li>
+                    <li>Bachelor of Science in Electrical Engineering</li>
+                    <li>Bachelor of Science in Electronics Engineering</li>
+                    <li>Bachelor of Science in Information Technology</li>
+                    <li>Bachelor of Science in Manufacturing Engineering</li>
+                    <li>Bachelor of Science in Mechanical Engineering</li></font>
+                </ul>
+                <h3>COLLEGE OF HUMANITIES, ARTS AND SOCIAL SCIENCES</h3>
+                <ul><font color="white">
+                    <li>Bachelor of Arts in Communication</li>
+                    <li>Bachelor of Arts in Communication Major in Public Relations</li>
+                    <li>Bachelor of Arts in Public Relations</li></font>
+                </ul>
+                <h3>COLLEGE OF NURSING</h3>
+                <ul><font color="white">
+                    <li>Bachelor of Science in Nursing</li></font>
+                </ul> 
+                <h3>COLLEGE OF PHYSICAL THERAPHY</h3>   
+                <ul><font color="white">
+                    <li>Bachelor of Science in Physical Therapy</li></font>
+                </ul>
+                <h3>COLLEGE OF SCIENCE</h3>
+                <ul><font color="white">
+                    <li>Bachelor of Science in Biology</li>
+                    <li>Bachelor of Science in Chemistry</li>
+                    <li>Bachelor of Science in Mathematics</li>
+                    <li>Bachelor of Science in Psychology</li></font>
+                </ul>
             </div>
 
         </div> <!-- end home-content -->
 
-        <ul class="home-social">
-            <li>
-                <a href="#"><i class="im im-facebook" aria-hidden="true"></i><span>Facebook Page</span></a>
-            </li>
-            <li>
-                <a href="#"><i class="im im-twitter" aria-hidden="true"></i><span>Twittter</span></a>
-            </li>
-            <li>
-                <a href="#"><i class="im im-instagram" aria-hidden="true"></i><span>Instagram</span></a>
-            </li>
-        </ul>
-        <!-- end home-social -->
 
     </section> <!-- end s-home -->
 
