@@ -60,23 +60,8 @@
 
 <?php 
     require 'dbConnect.php';
-    $userId = "1";
-    $pass = "admin123";
     drop();
     init();
-
-    $jsonResult = json_decode(getUser($userId, $pass));
-
-    if ($jsonResult->tempID == "")
-    {
-        // empty result
-        echo("User ID not found!");
-    }
-    else
-    {
-        //do something
-        echo("Logged In!");
-    }
 ?>
 
     <!-- home
