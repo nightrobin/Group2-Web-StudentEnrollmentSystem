@@ -140,78 +140,109 @@
     while($row = mysql_fetch_array($comments, MYSQL_ASSOC))
 {
   $lastname = $row['lastName'];
-                `firstName`, 
-                `middleName`, 
-                `suffix`, 
-                `LRN`, 
-                `age`, 
-                `gender`, 
-                `nationality`, 
-                `address`, 
-                `email`, 
-                `phoneNumber`, 
-                `status`, 
-                `applicantNumber`
-                `mMaidenName`, 
-                `mAddress`, 
-                `mContactNumber`, 
-                `mOccupation`, 
-                `fName`, 
-                `fAddress`, 
-                `fContactNumber`, 
-                `fOccupation`,
-                `jhsAddress`, 
-                `jhsSchoolYear`, 
-                `shsAddress`, 
-                `shsSchoolYear`,
-                `firstChoice`,
-                `secondChoice`, 
-                `thirdChoice`,
-                `gwaMath`, 
-                `gwaScience`,
-                `gwaEnglish`, 
-                `gwaFilipino`, 
-                `gwa`,
-                `password`
+  $firstName = $row['firstname'];
+  $$middleName = $row['middlename'];
+  $suffix = $row['suffix'];
+  $LRN = $row['LRN'];
+  $age = $row['age'];
+  $gender = $row['gender'];
+  $nationality = $row['nationality'];
+  $address = $row['address'];
+  $email = $row['email'];
+  $phoneNumber = $row['phoneNumber'];
+  $status = $row['status'];
+  $applicantNumber = $row['applicantNumber'];
+  $mMaidenName = $row['mMaidenName'];
+  $mAddress = $row['mAddress'];
+  $mContactNumber = $row['mContactNumber'];
+  $mOccupation = $row['mOccupation'];
+  $fName = $row['fName'];
+  $fContactNumber = $row['fContactNumber'];
+  $fOccupation = $row['fOccupation'];
+  $jhsAddress = $row['jhsAddress'];
+  $jhsSchoolYear = $row['jhsSchoolYear'];
+  $shsAddress = $row['shsAddress'];
+  $shsSchoolYear = $row['shsSchoolYear'];
+  $firstChoice = $row['firstChoice'];
+  $secondChoice = $row['secondChoice'];
+  $thirdChoice = $row['thirdChoice'];
+  $gwaMath = $row['gwaMath'];
+  $gwaScience = $row['gwaScience'];
+  $gwaEnglish = $row['gwaEnglish'];
+  $gwaFilipino = $row['gwaFilipino'];
+  $gwa = $row['gwa'];
+  $password = $row['password'];
 
 
   $lastname = htmlspecialchars($row['lastName'],ENT_QUOTES);
-                `firstName`, 
-                `middleName`, 
-                `suffix`, 
-                `LRN`, 
-                `age`, 
-                `gender`, 
-                `nationality`, 
-                `address`, 
-                `email`, 
-                `phoneNumber`, 
-                `status`, 
-                `applicantNumber`
-                `mMaidenName`, 
-                `mAddress`, 
-                `mContactNumber`, 
-                `mOccupation`, 
-                `fName`, 
-                `fAddress`, 
-                `fContactNumber`, 
-                `fOccupation`,
-                `jhsAddress`, 
-                `jhsSchoolYear`, 
-                `shsAddress`, 
-                `shsSchoolYear`,
-                `firstChoice`,
-                `secondChoice`, 
-                `thirdChoice`,
-                `gwaMath`, 
-                `gwaScience`,
-                `gwaEnglish`, 
-                `gwaFilipino`, 
-                `gwa`,
-                `password`
+  $firstName = htmlspecialchars($row['firstName'],ENT_QUOTES);
+  $middleName = htmlspecialchars($row['middleName'],ENT_QUOTES);
+  $suffix = htmlspecialchars($row['suffix'],ENT_QUOTES);
+  $LRN = htmlspecialchars($row['LRN'],ENT_QUOTES);
+  $age = htmlspecialchars($row['age'],ENT_QUOTES);
+  $gender = htmlspecialchars($row['gender'],ENT_QUOTES);
+  $nationality= htmlspecialchars($row['nationality'],ENT_QUOTES);
+  $address = htmlspecialchars($row['address'],ENT_QUOTES);
+  $email = htmlspecialchars($row['email'],ENT_QUOTES);
+  $phoneNumber = htmlspecialchars($row['phoneNumber'],ENT_QUOTES);
+  $status = htmlspecialchars($row['status'],ENT_QUOTES);
+  $applicantNumber = htmlspecialchars($row['applicantNumber'],ENT_QUOTES);
+  $mMaidenName = htmlspecialchars($row['mMaidenName'],ENT_QUOTES);
+  $mAddress = htmlspecialchars($row['mAddress'],ENT_QUOTES);
+  $mContactNumber = htmlspecialchars($row['mContactNumber'],ENT_QUOTES);
+  $mOccupation = htmlspecialchars($row['mOccupation'],ENT_QUOTES);
+  $fName = htmlspecialchars($row['fName'],ENT_QUOTES);
+  $fAddress = htmlspecialchars($row['fAddress'],ENT_QUOTES);
+  $fContactNumber = htmlspecialchars($row['fContactNumber'],ENT_QUOTES);
+  $jhsAddress = htmlspecialchars($row['jhsAddress'],ENT_QUOTES);
+  $jhsSchoolYear = htmlspecialchars($row['jhsSchoolYear'],ENT_QUOTES);
+  $shsAddress = htmlspecialchars($row['shsAddress'],ENT_QUOTES);
+  $shsSchoolYear = htmlspecialchars($row['shsSchoolYear'],ENT_QUOTES);
+  $firstChoice = htmlspecialchars($row['firstChoice'],ENT_QUOTES);
+  $secondChoice = htmlspecialchars($row['secondChoice'],ENT_QUOTES);
+  $thirdChoice = htmlspecialchars($row['thirdChoice'],ENT_QUOTES);
+  $gwaMath = htmlspecialchars($row['gwaMath'],ENT_QUOTES);
+  $gwaScience = htmlspecialchars($row['gwaScience'],ENT_QUOTES);
+  $gwaEnglish = htmlspecialchars($row['gwaEnglish'],ENT_QUOTES);
+  $gwaFilipino = htmlspecialchars($row['gwaFilipino'],ENT_QUOTES);
+  $fOccupation = htmlspecialchars($row['gwa'],ENT_QUOTES);
+  $fOccupation = htmlspecialchars($row['password'],ENT_QUOTES);
+
 
   echo "  <div style='margin:30px 0px;'>
       Last Name: $lastname<br />
+      First Name: $firstName<br />
+      Middle Name: $middleName<br />
+      Suffix: $suffix<br />
+      LRN: $LRN<br />
+      Age: $age<br />
+      Gender: $gender<br />
+      Nationality: $nationality<br />
+      Address: $address <br />
+      Email: $email<br />
+      Phone Number: $phoneNumber <br />
+      Status: $status <br />
+      Application Number: $applicantNumber <br />
+      Mother's Name: $mMaidenName <br />
+      Address: $mAddress <br />
+      Contact Number: $mContactNumber <br />
+      OCcupation: $mOccupation<br />
+      Father's Name: $fName <br />
+      Contact Number: $fContactNumber <br />
+      OCcupation: $fOccupation<br />
+      Address: $jhsAddress<br />
+      School Year: $jhsSchoolYear <br />
+      Address: $shsAddress <br />
+      School Year: $shsSchoolYear <br />
+      First Choice: $firstChoice<br />
+      Second Choice: $secondChoice<br />
+      Third Choice: $thirdChoice<br />
+      Mathematics: $gwaMath <br />
+      Science: $gwaScience <br />
+      English: $gwaEnglish<br />
+      Filipino: $gwaFilipino <br />
+      GWA: $gwa <br />
+      Password: $password<br />
 
     </div>
   ";
