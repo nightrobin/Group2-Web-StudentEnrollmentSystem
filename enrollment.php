@@ -93,7 +93,7 @@
           <label for="fname"><B>Last Name</B></label>
         </div>
         <div class="col-75">
-          <input type="text" id="LastName" name="lastname" placeholder="Last name.." size="40" value="" required>
+          <input type="text" id="LastName" name="lastname" placeholder="Last name.." size="40" required="required">
         </div>
       </div>
       <div class="row">
@@ -392,8 +392,9 @@
               <input type="text" id="Password" placeholder="Password..." size="30" value="" required>
             </div>
             <div class="col-25">
-            <button type="button" onclick="my_button_click_handler" style="float:right;">Submit</button>
-  </div>
+            <a href="view info.php"><button type="button" onclick="my_button_click_handler" style="float:right; margin-right: 10%; margin-top:4%">Submit</button></a>
+            <a href="index.php"><button type="button" onclick="my_button_click_handler" style="float:left; margin-left:.05%; margin-top:4%;">Back</button></a>
+</div>
       <script>
         function my_button_click_handler ()
         {

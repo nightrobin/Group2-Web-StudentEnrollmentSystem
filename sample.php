@@ -10,7 +10,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>View Information</title>
+    <title>Manila State University</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -33,76 +33,40 @@
     ================================================== -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    
+
 </head>
-
 <style>
-    .container{
-        border: 3px double;
-        border-radius: 10px;
-        border-color: #B22222;
-        background-color: #f2f2f2;
-        background-color: rgba(0, 0, 0, 0.4);
-        width: 80%;
-        height: 40%;
-        margin: 0% 10% 1%;
-        padding: 3%;
-      }
-    </style>
+.buttons {
+    height: 100px;
+	width: 350px;
+	font-size: 20px;
+	color: ivory;
+    background-color: rgba(0, 0, 0, 0.4);
+	background-repeat: no-repeat;
+	background-size: 490px 150px;
+    margin-left:45%;
+    display: block;
 
-<body id="top">
-
-<?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbName = "records";
-    {
-    /*<!-- Connect to database
-    ================================================== -->*/
-    $conn = new mysqli($GLOBALS['servername'], $GLOBALS['username'], $GLOBALS['password'], $GLOBALS['dbName']);
-    // Check connection
-    if ($conn->connect_error)
-    {
-    die("Connection failed: " . $conn->connect_error);
-    echo("Cannot connect!");
-    }
-    
-?>
-
-    <!-- header
+}
+</style>
+<body>
+<!-- header
     ================================================== -->
     <header class="s-header">
 
         <div class="header-logo">
-            <a class="site-logo" href="index.php"><img src="images/logo1.png" alt="Manila State University"></a>
+            <a class="site-logo" href="index.html"><img src="images/logo1.png" alt="Manila State University"></a>
         </div>
 
         <nav class="header-nav-wrap">
             <ul class="header-nav">
-                <li class="current"><a href="course_offered.php">Courses Offered</a></li>
-                <li><a href="enrollment.php">Enroll Now</a></li>
-                <li><a href="login.php">Login</a></li>
+                <li class="current"><font color="white"><br>Welcome to Manila State University</font></li>
             </ul>
         </nav>
 
         <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
 
     </header> <!-- end s-header -->
-
-            <!-- start home-social -->
-    <ul class="home-social">
-        <li>
-            <a href="#"><i class="im im-facebook" aria-hidden="true"></i><span>Facebook Page</span></a>
-        </li>
-        <li>
-            <a href="#"><i class="im im-twitter" aria-hidden="true"></i><span>Twittter</span></a>
-        </li>
-        <li>
-            <a href="#"><i class="im im-instagram" aria-hidden="true"></i><span>Instagram</span></a>
-        </li>
-    </ul>
-            <!-- end home-social -->
 
     <!-- home
    ================================================== -->
@@ -113,68 +77,20 @@
         <div class="shadow-overlay"></div>
 
         <div class="home-content">
-
             <div class="row home-content__main">
-
-                
-        </div> <!-- end home-content -->
-        
-        <h1>Form Example</h1>
-        <div class="container">
-            <form action="/action_page.php">
-            
-        </div>
-
-    </section> <!-- end s-home -->
-
-    <!-- footer
-    ================================================== -->
-    <footer>
-        <div class="row">
-            <div class="col-full">
-
-                <ul class="footer-social">
-                    <li><a href="#0">
-                            <i class="im im-facebook" aria-hidden="true"></i>
-                            <span>MSU Facebook Page</span>
-                        </a></li>
-                    <li><a href="#0">
-                            <i class="im im-twitter" aria-hidden="true"></i>
-                            <span>MSU Twitter</span>
-                        </a></li>
-                    <li><a href="#0">
-                            <i class="im im-instagram" aria-hidden="true"></i>
-                            <span>MSU Instagram</span>
-                        </a></li>>
-                </ul>
-
-            </div>
-        </div>
-
-        <div class="row footer-bottom">
-
-            <div class="col-twelve">
-                <div class="copyright">
-                    <span>© 2021</span>
-                    <span>Designed by GROUP 2</span>
+                <div class="container">
+                    <div class="button_container">
+                        <a href="view info.php"><button class="buttons">
+                            VIEW MY INFORMATION
+                        </button></a>
+                    </div>
+                    <div class="button_container">
+                        <a href="index.php"><button class="buttons">
+                            LOG-OUT
+                        </button></a>
+                    </div>
                 </div>
-                <div style="font-size: 10px;">
-                    <span>Leader: JONN CHRISTOPHER R. SALVADOR
-                        <br> Members: Shellamie Akmad | Alexandra Jane Arivas
-                        <br> Carl Myrvin Lafiguera | Ana Pauline Medina | Francheska Yvette Navarro | Eldrin Dave Ramos
-                        <br> Jen Aira Reyes | Emmalyn Suyat | John Paul Torres
-                    </span>
-                </div>
-
-                <div class="go-top">
-                    <a class="smoothscroll" title="Back to Top" href="#top"><i class="im im-arrow-up"
-                            aria-hidden="true"></i></a>
-                </div>
-            </div>
-
-        </div> <!-- end footer-bottom -->
-
-    </footer> <!-- end footer -->
+   
 
     <div id="preloader">
         <div id="loader"></div>
@@ -183,7 +99,6 @@
 
     <!-- Java Script
     ================================================== -->
-
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>

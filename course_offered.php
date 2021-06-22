@@ -48,7 +48,7 @@
 
         <nav class="header-nav-wrap">
             <ul class="header-nav">
-                <li class="current"><a href="course_offered.php">Courses Offered</a></li>
+                <li class="current"><a href="index.php">Home</a></li>
                 <li><a href="enrollment.php">Enroll Now</a></li>
                 <li><a href="login.php">Login</a></li>
             </ul>

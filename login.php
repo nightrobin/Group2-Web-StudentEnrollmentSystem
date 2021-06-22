@@ -40,7 +40,6 @@
         border: 3px double;
         border-radius: 10px;
         border-color: #B22222;
-        background-color: rgba(0, 0, 0, 0.4);
         width: 60%;
         height: 50%;
         padding: 3%;
@@ -99,7 +98,7 @@
                             <label for="inputPassword" class="sr-only">Password</label>
                             <input type="password" id="inputPassword" class="form-control" placeholder="Password..." required="" size="35" style="color:white;">
         
-                            <button class="btn btn--stroke" type="submit" style="color:white; border-color:white;">Log in</button>
+                            <a href="sample.php"><button type="button" type="login" style="color:ivory; border-color:#B22222;">Log in</button></a>
                             <br>
                             <a href="enrollment.php"><u><font color="white">Not a Student? Click here to Enroll Now!</font></u></a>
                         </div>    
