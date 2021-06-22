@@ -70,24 +70,6 @@
 
 <body id="top">
 
-<?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbName = "records";
-    {
-    /*<!-- Connect to database
-    ================================================== -->*/
-    $conn = new mysqli($GLOBALS['servername'], $GLOBALS['username'], $GLOBALS['password'], $GLOBALS['dbName']);
-    // Check connection
-    if ($conn->connect_error)
-    {
-    die("Connection failed: " . $conn->connect_error);
-    echo("Cannot connect!");
-    }
-}
-?>
-
     <!-- header
     ================================================== -->
     <header class="s-header">
@@ -133,8 +115,113 @@
             <div class="row home-content__main">
                 
         </div> <!-- end home-content -->
+
+        <?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbName = "records";
+    {
+    /*<!-- Connect to database
+    ================================================== -->*/
+    $conn = new mysqli($GLOBALS['servername'], $GLOBALS['username'], $GLOBALS['password'], $GLOBALS['dbName']);
+    // Check connection
+    if ($conn->connect_error)
+    {
+    die("Connection failed: " . $conn->connect_error);
+    echo("Cannot connect!");
+    }
+}
+
+    $query = "SELECT * FROM `studInfo` WHERE `applicantNumber` = '1234'";
+
+    $comments = mysql_query($query);
+
+    while($row = mysql_fetch_array($comments, MYSQL_ASSOC))
+{
+  $lastname = $row['lastName'];
+                `firstName`, 
+                `middleName`, 
+                `suffix`, 
+                `LRN`, 
+                `age`, 
+                `gender`, 
+                `nationality`, 
+                `address`, 
+                `email`, 
+                `phoneNumber`, 
+                `status`, 
+                `applicantNumber`
+                `mMaidenName`, 
+                `mAddress`, 
+                `mContactNumber`, 
+                `mOccupation`, 
+                `fName`, 
+                `fAddress`, 
+                `fContactNumber`, 
+                `fOccupation`,
+                `jhsAddress`, 
+                `jhsSchoolYear`, 
+                `shsAddress`, 
+                `shsSchoolYear`,
+                `firstChoice`,
+                `secondChoice`, 
+                `thirdChoice`,
+                `gwaMath`, 
+                `gwaScience`,
+                `gwaEnglish`, 
+                `gwaFilipino`, 
+                `gwa`,
+                `password`
+
+
+  $lastname = htmlspecialchars($row['lastName'],ENT_QUOTES);
+                `firstName`, 
+                `middleName`, 
+                `suffix`, 
+                `LRN`, 
+                `age`, 
+                `gender`, 
+                `nationality`, 
+                `address`, 
+                `email`, 
+                `phoneNumber`, 
+                `status`, 
+                `applicantNumber`
+                `mMaidenName`, 
+                `mAddress`, 
+                `mContactNumber`, 
+                `mOccupation`, 
+                `fName`, 
+                `fAddress`, 
+                `fContactNumber`, 
+                `fOccupation`,
+                `jhsAddress`, 
+                `jhsSchoolYear`, 
+                `shsAddress`, 
+                `shsSchoolYear`,
+                `firstChoice`,
+                `secondChoice`, 
+                `thirdChoice`,
+                `gwaMath`, 
+                `gwaScience`,
+                `gwaEnglish`, 
+                `gwaFilipino`, 
+                `gwa`,
+                `password`
+
+  echo "  <div style='margin:30px 0px;'>
+      Last Name: $lastname<br />
+
+    </div>
+  ";
+}
+
+mysql_close($con);
+    
+?>
         
-        <form action="/action_page.php">
+        echo " <form action="/action_page.php">
             <div class="container">
                 <div class="row">
             <h3><B>STUDENT'S INFORMATION</B></h3>
