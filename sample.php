@@ -10,7 +10,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Manila State University</title>
+    <title>View Information</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -33,17 +33,49 @@
     ================================================== -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-
+    
 </head>
 
+<style>
+    .container{
+        border: 3px double;
+        border-radius: 10px;
+        border-color: #B22222;
+        background-color: #f2f2f2;
+        background-color: rgba(0, 0, 0, 0.4);
+        width: 80%;
+        height: 40%;
+        margin: 0% 10% 1%;
+        padding: 3%;
+      }
+    </style>
+
 <body id="top">
+
+<?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbName = "records";
+    {
+    /*<!-- Connect to database
+    ================================================== -->*/
+    $conn = new mysqli($GLOBALS['servername'], $GLOBALS['username'], $GLOBALS['password'], $GLOBALS['dbName']);
+    // Check connection
+    if ($conn->connect_error)
+    {
+    die("Connection failed: " . $conn->connect_error);
+    echo("Cannot connect!");
+    }
+    
+?>
 
     <!-- header
     ================================================== -->
     <header class="s-header">
 
         <div class="header-logo">
-            <a class="site-logo" href="index.html"><img src="images/logo1.png" alt="Manila State University"></a>
+            <a class="site-logo" href="index.php"><img src="images/logo1.png" alt="Manila State University"></a>
         </div>
 
         <nav class="header-nav-wrap">
@@ -58,11 +90,19 @@
 
     </header> <!-- end s-header -->
 
-<?php 
-    require 'dbConnect.php';
-    drop();
-    init();
-?>
+            <!-- start home-social -->
+    <ul class="home-social">
+        <li>
+            <a href="#"><i class="im im-facebook" aria-hidden="true"></i><span>Facebook Page</span></a>
+        </li>
+        <li>
+            <a href="#"><i class="im im-twitter" aria-hidden="true"></i><span>Twittter</span></a>
+        </li>
+        <li>
+            <a href="#"><i class="im im-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+        </li>
+    </ul>
+            <!-- end home-social -->
 
     <!-- home
    ================================================== -->
@@ -76,41 +116,14 @@
 
             <div class="row home-content__main">
 
-                <h3>GROUP 2 ENROLLMENT WEBSITE</h3>
-
-                <h1>
-                    Welcome to <br>
-                    Manila State University!<br>
-                    Not a student?<br><font color="darkred">ENROLL NOW!</font>
-                </h1>
-
-                <div class="home-content__buttons">
-                    <a href="enrollment.php"><button class="btn btn--stroke">ENROLL NOW</button></a>
-                    <a href="login.php"><button class="btn btn--stroke">LOGIN</button></a>
-                </div>
-
-                <div class="home-content__scroll">
-                    <a href="#about" class="scroll-link smoothscroll">
-                        <span>Scroll Down</span>
-                    </a>
-                </div>
-
-            </div>
-
+                
         </div> <!-- end home-content -->
-
-        <ul class="home-social">
-            <li>
-                <a href="#"><i class="im im-facebook" aria-hidden="true"></i><span>Facebook Page</span></a>
-            </li>
-            <li>
-                <a href="#"><i class="im im-twitter" aria-hidden="true"></i><span>Twittter</span></a>
-            </li>
-            <li>
-                <a href="#"><i class="im im-instagram" aria-hidden="true"></i><span>Instagram</span></a>
-            </li>
-        </ul>
-        <!-- end home-social -->
+        
+        <h1>Form Example</h1>
+        <div class="container">
+            <form action="/action_page.php">
+            
+        </div>
 
     </section> <!-- end s-home -->
 
@@ -119,10 +132,6 @@
     <footer>
         <div class="row">
             <div class="col-full">
-
-                <div class="footer-logo">
-                    <a class="footer-site-logo" href="#0"><img src="images/logo.png" alt="Homepage"></a>
-                </div>
 
                 <ul class="footer-social">
                     <li><a href="#0">
@@ -174,6 +183,7 @@
 
     <!-- Java Script
     ================================================== -->
+
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>

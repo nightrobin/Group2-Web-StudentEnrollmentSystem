@@ -236,8 +236,6 @@
     }
         $conn->close();
 
-    
-
     $applicantNo = "MSU2021-00" .$generated + 1;
     return $applicantNo;
     }

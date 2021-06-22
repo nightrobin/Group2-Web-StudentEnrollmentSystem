@@ -99,9 +99,9 @@
                             <label for="inputPassword" class="sr-only">Password</label>
                             <input type="password" id="inputPassword" class="form-control" placeholder="Password..." required="" size="35" style="color:white;">
         
-                            <button class="btn btn-lg btn-danger btn-block" type="submit">Log in</button>
+                            <button class="btn btn--stroke" type="submit" style="color:white; border-color:white;">Log in</button>
                             <br>
-                            <a href="enrollment.html"><u><font color="white">Not a Student? Click here to Enroll Now!</font></u></a>
+                            <a href="enrollment.php"><u><font color="white">Not a Student? Click here to Enroll Now!</font></u></a>
                         </div>    
                     </form>
                 </div>
