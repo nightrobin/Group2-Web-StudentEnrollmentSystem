@@ -221,13 +221,13 @@
     echo("Cannot connect!");
     }
 
-    $sql = "SELECT MAX(`id`) FROM studentInfo";
+    $sql = "SELECT MAX(`id`) AS maxID FROM studentInfo";
     $result = $conn->query($sql);
     if ($result->num_rows > 0)
     {
         while($row = $result->fetch_assoc())
         {
-            $generated = (is_null($row["id"])) ? 0 : (int)$row["id"];
+            $generated = (is_null($row["maxID"])) ? 0 : (int)$row["maxID"];
         }
     }
     else 
