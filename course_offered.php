@@ -49,8 +49,8 @@
         <nav class="header-nav-wrap">
             <ul class="header-nav">
                 <li class="current"><a href="index.php">Home</a></li>
-                <li><a href="enrollment.php">Enroll Now</a></li>
-                <li><a href="login.php">Login</a></li>
+                <li><a href="enroll.php">Enroll Now</a></li>
+                <li><a href="main.php">Login</a></li>
             </ul>
         </nav>
 

@@ -49,21 +49,14 @@
         <nav class="header-nav-wrap">
             <ul class="header-nav">
                 <li class="current"><a href="course_offered.php">Courses Offered</a></li>
-                <li><a href="enrollment.php">Enroll Now</a></li>
-                <li><a href="login.php">Login</a></li>
+                <li><a href="enroll.php">Enroll Now</a></li>
+                <li><a href="main.php">Login</a></li>
             </ul>
         </nav>
 
         <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
 
     </header> <!-- end s-header -->
-
-<?php 
-    require 'dbConnect.php';
-    drop();
-    init();
-?>
-
     <!-- home
    ================================================== -->
     <section id="home" class="s-home page-hero target-section" data-parallax="scroll"
@@ -85,8 +78,8 @@
                 </h1>
 
                 <div class="home-content__buttons">
-                    <a href="enrollment.php"><button class="btn btn--stroke">ENROLL NOW</button></a>
-                    <a href="login.php"><button class="btn btn--stroke">LOGIN</button></a>
+                    <a href="enroll.php"><button class="btn btn--stroke">ENROLL NOW</button></a>
+                    <a href="main.php"><button class="btn btn--stroke">LOGIN</button></a>
                 </div>
 
                 <div class="home-content__scroll">
